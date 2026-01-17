@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Das Spiel – Schockomania</title>
+    <meta
+      name="description"
+      content="Grundregeln für Schocken und eine lokale Variante aus Dohren (Emsland)."
+    />
+    <meta property="og:title" content="Das Spiel – Schockomania" />
+    <meta
+      property="og:description"
+      content="Schocken verständlich erklärt: Grundregeln plus Variante Dohren (Emsland)."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/og-image.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="Schockomania Startseite">SCHOCKOMANIA</a>
+        <div class="header-actions">
+          <nav class="main-nav" aria-label="Hauptnavigation">
+            <a href="game.html">Das Spiel</a>
+            <a href="app.html">Die App</a>
+            <a href="products.html">Produkte</a>
+          </nav>
+          <a class="btn btn-secondary header-cta" href="game.html">Schocken?</a>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
+          Menü <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobile-menu" aria-hidden="true">
+        <a href="game.html">Das Spiel</a>
+        <a href="app.html">Die App</a>
+        <a href="products.html">Produkte</a>
+      </div>
+      <div class="nav-scrim" data-nav-close="true" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="tag">Regeln</span>
+          <h1>Schocken – Grundregeln</h1>
+          <p class="section-subtitle">
+            Klar und knapp für Einsteiger. Ohne lokale Sonderregeln, damit der Einstieg leicht bleibt.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid">
+          <div class="card">
+            <h3>Kurzüberblick</h3>
+            <p>
+              Schocken ist ein Würfelspiel für mindestens zwei Spieler. Ziel ist es, am Ende nicht alle
+              Strafpunkte zu besitzen.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Spielmaterial</h3>
+            <ul class="bullets">
+              <li>3 sechsseitige Würfel</li>
+              <li>1 Würfelbecher</li>
+              <li>15 Strafpunkte (Bierdeckel, Karten oder Chips)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Spielvorbereitung</h3>
+            <ul class="bullets">
+              <li>Strafpunkte liegen in der Mitte</li>
+              <li>Startspieler wird durch einmaliges Würfeln bestimmt</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Spielphasen</h3>
+            <ul class="bullets">
+              <li>1. Verteilphase</li>
+              <li>2. Finalphase</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Verteilphase</h3>
+            <ul class="bullets">
+              <li>Startspieler darf bis zu 3-mal würfeln</li>
+              <li>Alle folgenden Spieler maximal so oft</li>
+              <li>Schlechtester Wurf erhält Strafpunkte</li>
+              <li>Phase endet, wenn keine Punkte mehr in der Mitte liegen</li>
+              <li>Spieler ohne Strafpunkte scheiden aus</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Finalphase</h3>
+            <ul class="bullets">
+              <li>Nur Spieler mit Strafpunkten spielen weiter</li>
+              <li>Bester Wurf gibt Punkte ab</li>
+              <li>Schlechtester Wurf erhält diese</li>
+              <li>Wer am Ende alle Punkte hat, verliert</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Wertung der Würfe (Grundregeln)</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>Schock</h3>
+              <p>
+                Ein Schock besteht aus einer 1 und zwei gleichen Würfeln. Ein Schock-out (1-1-1) ist der
+                höchste Wurf im Spiel. Schock schlägt alle anderen Würfe.
+              </p>
+            </div>
+            <div class="card">
+              <h3>General</h3>
+              <p>
+                Drei gleiche Würfel (außer 1-1-1). Wie General bewertet wird, sollte vor dem Spielbeginn
+                festgelegt werden.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Straße</h3>
+              <p>
+                Drei aufeinanderfolgende Zahlen. Ob mit großer und kleiner Straße gespielt wird, wird vor
+                dem Spielbeginn geklärt.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Augenwurf</h3>
+              <p>Alle übrigen Würfe zählen als Augenwurf. Die Wertigkeit richtet sich nach der Augensumme.</p>
+            </div>
+            <div class="card">
+              <h3>Gleichstand</h3>
+              <p class="helper">
+                Bei Gleichstand gibt es regionale Regeln. Welche Regel gilt, wird vor dem Spiel geklärt.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Strafpunkte</h3>
+              <p class="helper">
+                Die Anzahl der Strafpunkte richtet sich nach dem besten Wurf der Runde. Regionale Abweichungen
+                sind möglich.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Schocken – Variante Dohren (Emsland)</h2>
+          <p class="section-subtitle">
+            Diese Variante beschreibt die in Dohren (Emsland) übliche Spielweise. Sie ergänzt die Grundregeln
+            um verbindliche Absprachen, Wertung und Strafregeln.
+          </p>
+          <div class="grid">
+            <div class="card">
+              <h3>Verbindliche Absprachen vor Spielbeginn</h3>
+              <ul class="bullets">
+                <li>Einigung, ob gespielt wird mit: nur Straße oder großer und kleiner Straße</li>
+                <li>Einigung, wie General gewertet wird</li>
+                <li>Diese Entscheidungen gelten für das gesamte Spiel</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Wertung der Würfe</h3>
+              <p class="helper">
+                Die folgenden Werte gelten verbindlich in Dohren (Emsland). Augenwürfe werden von hinten
+                nach vorne ausgesprochen, z. B. 6-5-4 = „sechs vierundfünfzig“.
+              </p>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Wurf</th>
+                      <th>Wertung</th>
+                      <th>Hinweis</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Augenwurf</td>
+                      <td>1 Strafpunkt</td>
+                      <td>Wertigkeit nach Augensumme</td>
+                    </tr>
+                    <tr>
+                      <td>Straße</td>
+                      <td>2 Strafpunkte</td>
+                      <td>Große/kleine Straße vor Spielbeginn festlegen</td>
+                    </tr>
+                    <tr>
+                      <td>General</td>
+                      <td>3 Strafpunkte</td>
+                      <td>Drei gleiche Würfel (außer 1-1-1)</td>
+                    </tr>
+                    <tr>
+                      <td>Schock</td>
+                      <td>Schock-Wert</td>
+                      <td>1 + zwei gleiche; z. B. 1-6-6 = 6</td>
+                    </tr>
+                    <tr>
+                      <td>Jule</td>
+                      <td>7 Strafpunkte</td>
+                      <td>1-2-4, zweithöchster Wurf im Spiel</td>
+                    </tr>
+                    <tr>
+                      <td>Schock-Out</td>
+                      <td>Spielende</td>
+                      <td>1-1-1, höchster Wurf, beendet sofort</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="helper">
+                Schock schlägt immer General und Straße – unabhängig von der Punktzahl. Schock-Out beendet
+                das Spiel sofort; der Verlierer erhält alle Deckel und zahlt eine Runde.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Gleichstand</h3>
+              <p>
+                Regel: „Mitt is Schitt“. Bei gleicher Wertigkeit verliert der Spieler, der als letzter
+                gewürfelt hat.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Strafregeln</h3>
+              <ul class="bullets">
+                <li>
+                  Würfel fallen vom Tisch: Fallen ein oder mehrere Würfel vom Tisch, muss der Spieler eine
+                  Runde ausgeben. Der Wurf zählt nicht.
+                </li>
+                <li>
+                  Lustwurf: Ein Lustwurf liegt vor, wenn ein Spieler würfelt, obwohl er weder gewinnen noch
+                  verlieren kann. Regel: „Ein Lustwurf kostet eine Runde.“ Der Wurf zählt nicht.
+                </li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Sechsen drehen (nur Dohren)</h3>
+              <ul class="bullets">
+                <li>Bei einer Kombination mit zwei Sechsen (6-6-x) darf genau eine Sechs zu einer Eins gedreht werden.</li>
+                <li>Das Ergebnis ist damit 1-x-x. Es ist nicht erlaubt, beide Sechsen zu Einsen zu drehen (kein 1-1-x).</li>
+                <li>Die gedrehte Eins bleibt für die restlichen Würfe der Runde liegen.</li>
+                <li>Jeder Würfel, der liegen gelassen wird, darf in den verbleibenden Würfen nicht mehr gewürfelt, gedreht oder verändert werden.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Kommunikationsregeln</h3>
+              <ul class="bullets">
+                <li>Es gibt Runden, in denen nicht gefragt werden darf: was hoch oder tief ist</li>
+                <li>Es darf nicht gefragt werden, was vorherige Spieler gewürfelt haben</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Charakter der Dohren-Variante</h3>
+              <ul class="bullets">
+                <li>Fokus auf Aufmerksamkeit, Disziplin und Respekt</li>
+                <li>Wenig Diskussion, klare Konsequenzen</li>
+                <li>Lokale Regeln sind Teil des Spiels</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>SCHOCKOMANIA</strong>
+          <p>Die Plattform für Schocken – Regeln, Varianten & Tools.</p>
+        </div>
+        <div>
+          <div class="footer-links">
+            <a href="impressum.html" rel="nofollow">Impressum</a>
+            <a href="datenschutz.html" rel="nofollow">Datenschutz</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+

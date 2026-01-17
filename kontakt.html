@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontakt – Schockomania</title>
+    <meta
+      name="description"
+      content="Kontakt zu Schockomania – Feedback, Fragen und Interesse an der App."
+    />
+    <meta property="og:title" content="Kontakt – Schockomania" />
+    <meta
+      property="og:description"
+      content="Schreib uns bei Fragen, Feedback oder Interesse an der Schockomania-App."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/og-image.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="index.html" aria-label="Schockomania Startseite">SCHOCKOMANIA</a>
+        <div class="header-actions">
+          <nav class="main-nav" aria-label="Hauptnavigation">
+            <a href="game.html">Das Spiel</a>
+            <a href="app.html">Die App</a>
+            <a href="products.html">Produkte</a>
+          </nav>
+          <a class="btn btn-secondary header-cta" href="game.html">Schocken?</a>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
+          Menü <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="mobile-nav" id="mobile-menu" aria-hidden="true">
+        <a href="game.html">Das Spiel</a>
+        <a href="app.html">Die App</a>
+        <a href="products.html">Produkte</a>
+      </div>
+      <div class="nav-scrim" data-nav-close="true" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="tag">Kontakt</span>
+          <h1>Schreib uns</h1>
+          <p class="section-subtitle">
+            Feedback, Fragen oder Interesse an der App? Wir freuen uns auf deine Nachricht.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container grid">
+          <div class="card">
+            <h3>Kontaktformular</h3>
+            <p class="helper">
+              Das Formular öffnet dein E-Mail-Programm als Fallback.
+            </p>
+            <form class="form" action="mailto:kontakt@schockomania.de" method="post" enctype="text/plain">
+              <label>
+                Name
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                E-Mail
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label>
+                Nachricht
+                <textarea name="message" required></textarea>
+              </label>
+              <button class="btn btn-primary" type="submit">Nachricht senden</button>
+            </form>
+            <p class="helper">
+              Alternativ direkt mailen: <a href="mailto:kontakt@schockomania.de">kontakt@schockomania.de</a>
+            </p>
+          </div>
+          <div class="card">
+            <h3>Feedback zur App-Idee</h3>
+            <p class="helper">
+              Sag uns, was dir an einer Schocken-App wichtig wäre – kurz und konkret genügt.
+            </p>
+            <a class="btn btn-secondary" href="app.html">App-Status ansehen</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>SCHOCKOMANIA</strong>
+          <p>Die Plattform für Schocken – Regeln, Varianten & Tools.</p>
+        </div>
+        <div>
+          <div class="footer-links">
+            <a href="impressum.html" rel="nofollow">Impressum</a>
+            <a href="datenschutz.html" rel="nofollow">Datenschutz</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
