@@ -5,3 +5,5 @@ Disallow: /datenschutz
 Disallow: /datenschutz.html
 
 Allow: /
+
+Sitemap: https://schockomania.de/sitemap.xml

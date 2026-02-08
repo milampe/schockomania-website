@@ -1,0 +1,48 @@
+{
+  "throwRanking": [
+    {
+      "key": "SCHOCK_OUT",
+      "name": "Schock-Out",
+      "pattern": [1, 1, 1],
+      "penaltyDiscs": 15,
+      "description": "1-1-1, höchster Wurf im Spiel"
+    },
+    {
+      "key": "JULE",
+      "name": "Jule",
+      "pattern": [1, 2, 4],
+      "penaltyDiscs": 7,
+      "description": "1-2-4, zweithöchster Wurf"
+    },
+    {
+      "key": "SCHOCK",
+      "name": "Schock",
+      "pattern": "1+pair",
+      "penaltyDiscs": "value",
+      "description": "1 + zwei gleiche Würfel (z.B. 1-6-6 = 6 Strafpunkte)"
+    },
+    {
+      "key": "GENERAL",
+      "name": "General",
+      "pattern": "triple",
+      "penaltyDiscs": 3,
+      "description": "Drei gleiche Würfel (außer 1-1-1)"
+    },
+    {
+      "key": "STRAIGHT",
+      "name": "Straße",
+      "pattern": "straight",
+      "penaltyDiscs": 2,
+      "description": "Drei aufeinanderfolgende Zahlen (z.B. 4-5-6)"
+    },
+    {
+      "key": "EYE_THROW",
+      "name": "Augenwurf",
+      "pattern": "other",
+      "penaltyDiscs": 1,
+      "description": "Alle übrigen Würfe, Wertigkeit nach Augensumme"
+    }
+  ],
+  "players": ["Spieler A", "Spieler B", "Spieler C", "Spieler D"],
+  "maxRolls": 3
+}

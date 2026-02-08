@@ -15,13 +15,20 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/img/og-image.svg" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="canonical" href="https://schockomania.de/game.html" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=1.1" />
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/quiz.js" defer></script>
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Schockomania" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html" aria-label="Schockomania Startseite">SCHOCKOMANIA</a>
+        <a class="logo" href="/" aria-label="Schockomania Startseite">SCHOCKOMANIA</a>
         <div class="header-actions">
           <nav class="main-nav" aria-label="Hauptnavigation">
             <a href="game.html">Das Spiel</a>
@@ -67,7 +74,7 @@
             <ul class="bullets">
               <li>3 sechsseitige Würfel</li>
               <li>1 Würfelbecher</li>
-              <li>15 Strafpunkte (Bierdeckel, Karten oder Chips)</li>
+              <li>je nach Variante 13-16 Strafpunkte (Bierdeckel, Karten oder Chips)</li>
             </ul>
           </div>
           <div class="card">
@@ -133,7 +140,8 @@
             </div>
             <div class="card">
               <h3>Augenwurf</h3>
-              <p>Alle übrigen Würfe zählen als Augenwurf. Die Wertigkeit richtet sich nach der Augensumme.</p>
+              <p>Alle übrigen Würfe zählen als Augenwurf. Die Wertigkeit richtet sich je nach Variante der Augensumme (6-5-1 = 12) 
+                oder der Größe der Zahl (6-5-1 = 651)</p>
             </div>
             <div class="card">
               <h3>Gleichstand</h3>
@@ -144,34 +152,127 @@
             <div class="card">
               <h3>Strafpunkte</h3>
               <p class="helper">
-                Die Anzahl der Strafpunkte richtet sich nach dem besten Wurf der Runde. Regionale Abweichungen
-                sind möglich.
+                Die Anzahl der Strafpunkte richtet sich nach dem besten Wurf der Runde.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      <section id="learn-quiz" class="quiz-section">
+        <div class="container">
+          <div class="quiz-card">
+            <h2>Lernquiz: Wer gewinnt?</h2>
+            <p class="quiz-intro">
+              Teste dein Wissen: Pro Frage wird eine Runde simuliert. Bestimme Gewinner, Verlierer und die Strafpunkte.
+            </p>
+            
+            <div class="quiz-throws-display" aria-live="polite" aria-atomic="true">
+              <h3 class="quiz-throws-title">Gewürfelte Runde:</h3>
+              <div class="quiz-throws-grid"></div>
+            </div>
+
+            <div class="quiz-actions">
+              <button class="btn btn-primary quiz-new-round" type="button">Neue Runde</button>
+            </div>
+
+            <div class="quiz-row">
+              <div class="quiz-question">
+                <label id="quiz-winner-label">Wer gewinnt die Runde? (bester Wurf)</label>
+                <div class="quiz-options" role="radiogroup" aria-labelledby="quiz-winner-label">
+                  <div class="quiz-radio-group">
+                    <input type="radio" id="winner-a" name="quiz-winner" value="1. Spieler" aria-label="1. Spieler gewinnt" />
+                    <label for="winner-a">1. Spieler</label>
+                  </div>
+                  <div class="quiz-radio-group">
+                    <input type="radio" id="winner-b" name="quiz-winner" value="2. Spieler" aria-label="2. Spieler gewinnt" />
+                    <label for="winner-b">2. Spieler</label>
+                  </div>
+                  <div class="quiz-radio-group">
+                    <input type="radio" id="winner-c" name="quiz-winner" value="3. Spieler" aria-label="3. Spieler gewinnt" />
+                    <label for="winner-c">3. Spieler</label>
+                  </div>
+                  <div class="quiz-radio-group">
+                    <input type="radio" id="winner-d" name="quiz-winner" value="4. Spieler" aria-label="4. Spieler gewinnt" />
+                    <label for="winner-d">4. Spieler</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quiz-question">
+                <label id="quiz-loser-label">Wer verliert die Runde? (schlechtester Wurf)</label>
+                <div class="quiz-options" role="radiogroup" aria-labelledby="quiz-loser-label">
+                  <div class="quiz-radio-group">
+                    <input type="radio" id="loser-a" name="quiz-loser" value="1. Spieler" aria-label="1. Spieler verliert" />
+                    <label for="loser-a">1. Spieler</label>
+                  </div>
+                  <div class="quiz-radio-group">
+                    <input type="radio" id="loser-b" name="quiz-loser" value="2. Spieler" aria-label="2. Spieler verliert" />
+                    <label for="loser-b">2. Spieler</label>
+                  </div>
+                  <div class="quiz-radio-group">
+                    <input type="radio" id="loser-c" name="quiz-loser" value="3. Spieler" aria-label="3. Spieler verliert" />
+                    <label for="loser-c">3. Spieler</label>
+                  </div>
+                  <div class="quiz-radio-group">
+                    <input type="radio" id="loser-d" name="quiz-loser" value="4. Spieler" aria-label="4. Spieler verliert" />
+                    <label for="loser-d">4. Spieler</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="quiz-question">
+                <label id="quiz-penalty-label">Wie viele Strafpunkte bekommt der Verlierer?</label>
+                <div class="quiz-penalty-group" role="group" aria-labelledby="quiz-penalty-label">
+                  <button type="button" class="quiz-penalty-btn" data-penalty="1" aria-label="1 Strafpunkt">1</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="2" aria-label="2 Strafpunkte">2</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="3" aria-label="3 Strafpunkte">3</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="4" aria-label="4 Strafpunkte">4</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="5" aria-label="5 Strafpunkte">5</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="6" aria-label="6 Strafpunkte">6</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="7" aria-label="7 Strafpunkte">7</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="8" aria-label="8 Strafpunkte">8</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="9" aria-label="9 Strafpunkte">9</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="10" aria-label="10 Strafpunkte">10</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="11" aria-label="11 Strafpunkte">11</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="12" aria-label="12 Strafpunkte">12</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="13" aria-label="13 Strafpunkte">13</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="14" aria-label="14 Strafpunkte">14</button>
+                  <button type="button" class="quiz-penalty-btn" data-penalty="15" aria-label="15 Strafpunkte">15</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="quiz-actions">
+              <button class="btn btn-primary quiz-check" type="button">Antwort prüfen</button>
+              <button class="btn btn-secondary quiz-next" type="button" style="display: none;">Nächste Runde</button>
+            </div>
+
+            <div class="quiz-result" role="status" aria-live="polite" aria-atomic="true"></div>
+          </div>
+        </div>
+      </section>
+
       <section class="section">
         <div class="container">
-          <h2 class="section-title">Schocken – Variante Dohren (Emsland)</h2>
+          <h2 class="section-title">Schocken – Variante <a href=""https://de.wikipedia.org/wiki/Dohren_(Emsland)">Dohren (Emsland)</a></h2>
           <p class="section-subtitle">
             Diese Variante beschreibt die in Dohren (Emsland) übliche Spielweise. Sie ergänzt die Grundregeln
-            um verbindliche Absprachen, Wertung und Strafregeln.
+            um verbindliche Absprachen, Wertung und Strafregeln. In der Variante Dohren wird mit insgesamt 15 Strafpunkten gespielt.
           </p>
           <div class="grid">
             <div class="card">
               <h3>Verbindliche Absprachen vor Spielbeginn</h3>
               <ul class="bullets">
                 <li>Einigung, ob gespielt wird mit: nur Straße oder großer und kleiner Straße</li>
-                <li>Einigung, wie General gewertet wird</li>
+                <li>Einigung, ob General immer gleich bewertet wird</li>
                 <li>Diese Entscheidungen gelten für das gesamte Spiel</li>
               </ul>
             </div>
             <div class="card">
               <h3>Wertung der Würfe</h3>
               <p class="helper">
-                Die folgenden Werte gelten verbindlich in Dohren (Emsland). Augenwürfe werden von hinten
+                Die folgenden Werte gelten verbindlich in Dohren (Emsland). Bei Augenwürfen zählt die höchste Zahl (nicht die Summe). Augenwürfe werden von hinten
                 nach vorne ausgesprochen, z. B. 6-5-4 = „sechs vierundfünfzig“.
               </p>
               <div class="table-wrap">
@@ -187,7 +288,7 @@
                     <tr>
                       <td>Augenwurf</td>
                       <td>1 Strafpunkt</td>
-                      <td>Wertigkeit nach Augensumme</td>
+                      <td>Wertigkeit nach höchster Zahl (nicht Summe)</td>
                     </tr>
                     <tr>
                       <td>Straße</td>
@@ -256,6 +357,7 @@
               <ul class="bullets">
                 <li>Es gibt Runden, in denen nicht gefragt werden darf: was hoch oder tief ist</li>
                 <li>Es darf nicht gefragt werden, was vorherige Spieler gewürfelt haben</li>
+                <li>Wer aus Versehen würfelt, obwohl er bereits raus war ist wieder drin</li>
               </ul>
             </div>
             <div class="card">
